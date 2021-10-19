@@ -1,0 +1,32 @@
+.background-banner {
+    background-image: url(../../../images/incognito-man-building-biceps-with-barbell.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    color: white;
+}
+.home-text-style {
+    padding-top: 210px;
+}
+ /* .button-body {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+} */
+.btn-design-banner {
+    font-size: 20px;
+    color: white;
+    background-color: yellowgreen;
+    margin-left: 35px;
+    transition: 0.5s;
+} 
+/* .button-style a {
+    background-color: yellowgreen; 
+} */
+.btn-design-banner:hover {
+    color: yellowgreen;
+    background-color: transparent;
+    border: 2px solid yellowgreen;
+    
+}
