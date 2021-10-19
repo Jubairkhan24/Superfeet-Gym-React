@@ -1,38 +1,33 @@
 import React from 'react';
 
-import mechanic1 from '../../../images/mechanic/mechanic-1.jpg';
-import mechanic2 from '../../../images/mechanic/mechanic-2.jpg'
-import mechanic3 from '../../../images/mechanic/mechanic-3.jpg'
-import mechanic4 from '../../../images/mechanic/mechanic-4.jpg'
+import trainer01 from '../../../images/trainers/jakob-owens-qkQwDvRqQY8-unsplash.jpg';
+import trainer02 from '../../../images/trainers/damir-spanic-uytHnZAKNWQ-unsplash.jpg'
+import trainer03 from '../../../images/trainers/aaron-brogden-9y4MaTz2Js0-unsplash.jpg'
+
 import Trainer from '../Trainer/Trainer';
 
 const trainers = [
     {
-        img: mechanic1,
-        name: 'Andrew Smith',
-        expertize: '-Engine Expert-'
+        img: trainer01,
+        name: 'Baker Ali',
+        expertize: 'Professional Body Builder'
     },
     {
-        img: mechanic2,
-        name: 'John Anderson',
-        expertize: '-Polish Expert-'
+        img: trainer02,
+        name: 'Montu Mia',
+        expertize: 'Fitness Trainer'
     },
     {
-        img: mechanic3,
-        name: 'Zakaria Smith',
-        expertize: '-Coloring Expert-'
-    },
-    {
-        img: mechanic4,
-        name: 'Sakib Anderson',
-        expertize: '-Alrounder Expert-'
+        img: trainer03,
+        name: 'Mofia Molla',
+        expertize: 'Yoga Specialist'
     },
 ]
 
 const Trainers = () => {
     return (
         <div id="trainers" className="container">
-            <h2 className="text-primary mt-5">Our Experts</h2>
+            <h2 className="common-text-color my-5">Our Experts</h2>
             <div className="row">
                 {
                     trainers.map(expert => <Trainer

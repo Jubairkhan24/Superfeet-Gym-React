@@ -2,13 +2,13 @@ import './App.css';
 import Home from './Pages/Home/Home/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NotFound from './Pages/NotFound/NotFound';
-import Booking from './Pages/Home/CourseDetails/CourseDetails';
 import Login from './Pages/Login/Login/Login';
 import Header from './Pages/Shared/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Footer from './Footer/Footer';
 import Register from './Register/Register';
+import CourseDetail from './Pages/Home/CourseDetails/CourseDetails';
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
               <Register></Register>
             </Route>
             <PrivateRoute path="/booking/:serviceId">
-              <Booking></Booking>
+              <CourseDetail></CourseDetail>
             </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>

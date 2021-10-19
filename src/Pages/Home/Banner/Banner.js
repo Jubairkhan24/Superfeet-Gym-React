@@ -9,9 +9,9 @@ const Banner = () => {
     const contactButton = () => {
         history.push('./login');
     }
-    const courseButton = () => {
-        history.push('./home#services')
-    }
+    // const courseButton = () => {
+    //     history.push('./home#services')
+    // }
 
     return (
 
@@ -23,8 +23,8 @@ const Banner = () => {
                     <h2 className="d-flex text-start fw-bolder fs-1">Yoga training Center</h2>
                 </div>
                 <div className="py-5 container d-flex justify-content-start">
-                    <button onClick={contactButton} className=" btn-design-banner btn btn-lg ">Start Course</button>
-                    <button onClick={courseButton} className=" btn-design-banner btn btn-lg">Join Us</button>
+                    {/* <button onClick={} className=" btn-design-banner btn btn-lg ">Start Course</button> */}
+                    <button onClick={contactButton} className=" btn-design-banner btn btn-lg">Join Us</button>
                 </div>
             </div>
         </div>

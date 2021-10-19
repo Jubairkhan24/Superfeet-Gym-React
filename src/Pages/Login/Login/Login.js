@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Register from '../../../Register/Register';
 import useAuth from './../../../hooks/useAuth';
 
 const Login = () => {
@@ -19,13 +18,12 @@ const Login = () => {
                         <label for="exampleInputPassword1" className="form-label ">Password</label>
                         <input type="password" className="form-control" id="exampleInputPassword1" />
                     </div>
-                    <button type="submit" className="btn btn-outline-primary">Submit</button>
+                    <button type="submit" className="btn btn-outline-success">Submit</button>
                 </form>
                 <p className="my-4 text-center">New Here? <Link to="/register">create account</Link></p>
-                {/* <button type="submit" className="btn btn-outline-primary mt-2 mb-5"></button> */}
             </div>
             {/* <h2>Please Login</h2> */}
-            <button onClick={signInUsingGoogle} className="btn btn-warning">Google Sign In</button>
+            <button onClick={signInUsingGoogle} className="btn btn-outline-success">Google Sign In</button>
         </div>
     );
 };
