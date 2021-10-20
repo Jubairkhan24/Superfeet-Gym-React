@@ -1,22 +1,25 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification, updateProfile, sendPasswordResetEmail } from "firebase/auth";
 import { useState, useEffect } from 'react';
 import initializeAuthentication from './../Pages/Login/Firebase/firebase.init';
 
 initializeAuthentication();
+const googleProvider = new GoogleAuthProvider();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('');
     const [isLogin, setIsLogin] = useState(false)
+
     const auth = getAuth();
 
     const signInUsingGoogle = () => {
         setIsLoading(true);
-        const googleProvider = new GoogleAuthProvider();
+
 
         signInWithPopup(auth, googleProvider)
             .then(result => {
@@ -25,13 +28,13 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    // const toggleLogin = e => {
-    //     setIsLogin(e.target.checked);
-    // }
+    const toggleLogin = e => {
+        setIsLogin(e.target.checked);
+    }
 
-    // const handleNameChange = e => {
-    //     setName(e.target.value)
-    // }
+    const handleNameChange = e => {
+        setName(e.target.value)
+    }
 
     const handleEmailChange = e => {
         setEmail(e.target.value);
@@ -43,22 +46,14 @@ const useFirebase = () => {
 
     const handleRegistration = e => {
         e.preventDefault();
-        console.log(email, password)
-        if (password.length < 6) {
-            setError('password must be atleast 6 characters long.')
-            return;
-        }
-        if (!/(?=.[A-Z].*[A-Z])/.test(password)) {
-            setError('password must contain uppercase.')
-            return;
-        }
+        setUser(email, password)
 
-        // if (isLogin) {
-        //     processLogin(email, password)
-        // }
-        // else {
-        //     registerNewUser(email, password)
-        // }
+        if (isLogin) {
+            processLogin(email, password)
+        }
+        else {
+            registerNewUser(email, password)
+        }
     }
 
     const processLogin = (email, password) => {
@@ -79,25 +74,33 @@ const useFirebase = () => {
                 const user = result.user;
                 console.log(user);
                 setError('');
+                verifyEmail();
+                setUserName();
             })
             .catch(error => {
                 setError(error.message);
             })
     }
 
-    // const verifyEmail = () => {
-    //     sendEmailVerification(auth.currentUser)
-    //       .then(result => {
-    //         console.log(result)
-    //       })
-    //   }
+    const setUserName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then(result => { })
+    }
 
-    //   const handleResetPassword = () => {
-    //     sendPasswordResetEmail(auth, email)
-    //       .then(result => {
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+                console.log(result)
+            })
+    }
 
-    //       })
-    //   }
+    const handleResetPassword = () => {
+        sendPasswordResetEmail(auth, email)
+            .then(result => {
+
+            })
+    }
+
 
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
@@ -122,12 +125,14 @@ const useFirebase = () => {
     return {
         user,
         isLoading,
+        toggleLogin,
         handleEmailChange,
+        handleNameChange,
         handlePasswordChange,
         handleRegistration,
+        handleResetPassword,
         signInUsingGoogle,
         logOut
-
     }
 }
 

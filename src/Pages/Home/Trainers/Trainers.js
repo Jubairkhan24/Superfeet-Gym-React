@@ -19,7 +19,7 @@ const trainers = [
     },
     {
         img: trainer03,
-        name: 'Mofia Molla',
+        name: 'Mofiz Molla',
         expertize: 'Yoga Specialist'
     },
 ]

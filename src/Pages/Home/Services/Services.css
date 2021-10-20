@@ -7,7 +7,7 @@
     color: yellowgreen;
 }
 
-/* Make it responsive */
+
 @media only screen and (max-width:688px) {
     .service-container{
         grid-template-columns: repeat(1, 1fr);

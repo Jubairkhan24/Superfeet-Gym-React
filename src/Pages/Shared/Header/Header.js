@@ -20,11 +20,13 @@ const Header = () => {
                             className="common-text-color" as={HashLink} to="/home#membership">Join Us</Nav.Link>
                         <Nav.Link
                             className="common-text-color" as={HashLink} to="/home#trainers">Our Trainers</Nav.Link>
-                        {user?.email ?
-                            <Button onClick={logOut} variant="light" className="common-text-color">Logout</Button> :
-                            <Nav.Link as={Link} to="/login">Login</Nav.Link>}
+                        <Nav.Link
+                            className="common-text-color" as={HashLink} to="/register">Register</Nav.Link>
+                        {user?.displayName ?
+                            <Button onClick={logOut} className="common-text-color btn-outline-success">Logout</Button> :
+                            <Nav.Link className="common-text-color" as={Link} to="/login">Login</Nav.Link>}
                         <Navbar.Text className="common-text-color">
-                            Signed in as: <a href="#login">{user?.displayName}</a>
+                            Signed in as: <a href="#login" >{user?.displayName}</a>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>

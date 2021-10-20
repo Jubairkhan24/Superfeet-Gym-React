@@ -9,7 +9,7 @@ const Membership = () => {
             <p className="text-center text-secondary">We offer 3 monthly packages for our customers at a low price.</p>
             <p className="text-center text-secondary mb-5">Anyone can buy more than one month at a time</p>
 
-            <div class="row  row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center">
+            <div class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center">
                 <div class="col">
                     <div class="card card-style">
                         <div class="card-body ">

@@ -8,12 +8,6 @@
 .home-text-style {
     padding-top: 210px;
 }
- /* .button-body {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-} */
 .btn-design-banner {
     font-size: 20px;
     color: white;
@@ -21,12 +15,16 @@
     margin-left: 35px;
     transition: 0.5s;
 } 
-/* .button-style a {
-    background-color: yellowgreen; 
-} */
 .btn-design-banner:hover {
     color: yellowgreen;
     background-color: transparent;
     border: 2px solid yellowgreen;
     
+}
+
+@media only screen and (max-width:688px) {
+    .background-banner{
+        width: 100%;
+        background-size: cover;
+    }
 }

@@ -20,13 +20,15 @@ const Register = () => {
                     </div>
                     <div className="mb-3">
                         <label for="exampleInputPassword1" className="form-label ">Confirm Password</label>
-                        <input onBlur={handleEmailChange} type="password" className="form-control" id="exampleInputPassword1" />
+                        <input type="password" className="form-control" id="exampleInputPassword1" />
                     </div>
                     <div className="row mb-3 text-danger">{error}</div>
-                    <button type="submit" className="btn btn-outline-primary">Submit</button>
+                    <button type="submit" className="btn btn-outline-success">Submit</button>
                 </form>
+
                 <p className="text-center">Already have an account? <Link to="/login">Login</Link></p>
-                <button onClick={signInUsingGoogle} className="btn btn-warning">Google Sign In</button>
+
+                <button onClick={signInUsingGoogle} className="btn btn-outline-success">Google Sign In</button>
             </div>
         </div>
     );

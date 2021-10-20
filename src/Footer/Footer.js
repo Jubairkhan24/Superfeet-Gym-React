@@ -10,7 +10,7 @@ const Footer = () => {
                     <p>Address: 450/1 Level-2 Sector-11 Uttara, Dhaka.</p>
                     <p>Phone: +8801734354634</p>
                     <p>Email: codingvidyalaya21@gmail.com</p>
-                    <h3 className="mb-5 text-center">© All Rights reserved By Coding Vidyalaya</h3>
+                    <h3 className="mb-5 text-center">© All Rights reserved By Superfeet Gym</h3>
                 </div>
             </div>
         </div>
