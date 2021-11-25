@@ -16,7 +16,6 @@ const Header = () => {
                         <Nav.Link className="common-text-color" as={HashLink} to="/home#home">Home</Nav.Link>
                         <Nav.Link
                             className="common-text-color" as={HashLink} to="/home#services">Services</Nav.Link>
-                        {/* <h2>this is editable comment</h2> */}
                         <Nav.Link
                             className="common-text-color" as={HashLink} to="/home#membership">Join Us</Nav.Link>
                         <Nav.Link
