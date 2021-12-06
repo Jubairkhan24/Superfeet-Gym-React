@@ -9,7 +9,7 @@ const Footer = () => {
                     <h1 className="text-light mt-4">Superfeet Gym</h1>
                     <p>Address: 450/1 Level-2 Sector-11 Uttara, Dhaka.</p>
                     <p>Phone: +8801734354634</p>
-                    <p>Email: codingvidyalaya21@gmail.com</p>
+                    <p>Email: superfeet21@gmail.com</p>
                     <h3 className="mb-5 text-center">© All Rights reserved By Superfeet Gym</h3>
                 </div>
             </div>

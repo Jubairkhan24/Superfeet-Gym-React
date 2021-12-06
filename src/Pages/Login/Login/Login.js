@@ -20,7 +20,7 @@ const Login = () => {
                     </div>
                     <button type="submit" className="btn btn-outline-success">Submit</button>
                 </form>
-                <p className="my-4 text-center">New Here? <Link to="/register">create account</Link></p>
+                <p className="my-4 text-center" > New Here?<Link to="/register" style={{ textDecoration: 'none' }} className="common-text-color"> create account</Link></p>
             </div>
             <button onClick={signInUsingGoogle} className="btn btn-outline-success">Google Sign In</button>
         </div>
