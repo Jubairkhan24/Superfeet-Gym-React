@@ -24,10 +24,10 @@ const CourseDetail = () => {
 
     return (
         <div>
-            {/* <h2>this is course: {serviceId}</h2> */}
+            <h2>this is course: {serviceId}</h2>
 
             <div>
-                {/* <h1>{serviceId}</h1> */}
+                <h1>{serviceId}</h1>
                 <h2 className="common-text-color my-5">{singleServiceCard?.name}</h2>
                 <Container className="d-flex justify-content-center">
                     <Row className="d-flex justify-content-center">

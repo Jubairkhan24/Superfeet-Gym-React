@@ -1,3 +1,6 @@
+.membership-background {
+    background-color: #28282A;
+}
 .common-background-style {
     background-color: #fbfbfb;
 }
@@ -6,13 +9,17 @@
     border-radius: 10px;
 }
 .card-style {
-    box-shadow: 1px 1px 3px 3px #fbfbfb;
+    /* box-shadow: 1px 1px 3px 3px #fbfbfb; */
+    background-color: transparent;
+    border: 1px solid yellowgreen;
 }
 .member-btn-design {
     background-color: transparent;
-    border: 1px solid black;
+    color: yellowgreen;
+    border: 1px solid #ffffff;
+    transition: 0.3s;
 }
 .member-btn-design:hover {
-    color: yellowgreen;
-    border: 2px solid yellowgreen;
+    color: #ffffff;
+    border: 1px solid yellowgreen;
 }

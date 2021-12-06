@@ -9,8 +9,8 @@ const Header = () => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" >
-                <Container className="common-text-color">
-                    <Navbar.Brand className="common-text-color" href="#home">SuperFeet</Navbar.Brand>
+                <Container className="common-text-color py-2">
+                    <Navbar.Brand className="common-text-color text-light" href="#home">SuperFeet</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link className="common-text-color" as={HashLink} to="/home#home">Home</Nav.Link>
@@ -23,11 +23,11 @@ const Header = () => {
                         <Nav.Link
                             className="common-text-color" as={HashLink} to="/register">Register</Nav.Link>
                         {user?.displayName ?
-                            <Button onClick={logOut} className="common-text-color btn-outline-success">Logout</Button> :
+                            <Nav.Link onClick={logOut} className="common-text-color button-bg">Logout</Nav.Link> :
                             <Nav.Link className="common-text-color" as={Link} to="/login">Login</Nav.Link>}
-                        <Navbar.Text className="common-text-color">
-                            Signed in as: <a href="#login" >{user?.displayName}</a>
-                        </Navbar.Text>
+                        {/* <Navbar.Text className="common-text-color text-light">
+                            Signed in as: <a href="#login" className="text-light" >{user?.displayName}</a>
+                        </Navbar.Text> */}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

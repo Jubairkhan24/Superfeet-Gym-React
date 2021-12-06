@@ -1,3 +1,6 @@
 .common-text-color {
     color: yellowgreen;
 }
+.button-bg {
+    background-color: transparent;
+}

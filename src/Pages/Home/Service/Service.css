@@ -14,9 +14,10 @@
 }
 .btn-design {
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid #ffffff;
+    color: #dddddd;
 }
 .btn-design:hover {
     color: yellowgreen;
-    border: 2px solid yellowgreen;
+    border: 1px solid yellowgreen;
 }

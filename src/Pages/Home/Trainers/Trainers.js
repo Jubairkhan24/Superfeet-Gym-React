@@ -27,7 +27,7 @@ const trainers = [
 const Trainers = () => {
     return (
         <div id="trainers" className="container">
-            <h2 className="common-text-color my-5">Our Experts</h2>
+            <h2 className="common-text-color mt-5 mb-4">Our Experts</h2>
             <div className="row">
                 {
                     trainers.map(expert => <Trainer
